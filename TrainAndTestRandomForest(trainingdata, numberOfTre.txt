@@ -1,0 +1,17 @@
+TrainAndTestRandomForest(trainingdata, numberOfTrees, percentageOfAttributes, testdata){
+    forest <- empty dictionary/list.
+    FOR i from 1 to numberOfTrees do
+        randomly select percentageOfAttributes from trainingdata
+        IF informationGain != 0
+            input this randomly selected subset into decision_tree
+            calculate the information gain using informationGain
+            find best split and generate children nodes
+            forest[i] <- decisionTree
+            repeat IF condition until condition not met
+        ENDIF
+    ENFOR
+    FOR each tree in forest:
+        outputFileCSV <- predict(data, decisionTree)
+    outputFileCSV <- numberOfTrees and percentageOfAttributes
+    ENDFOR
+}
